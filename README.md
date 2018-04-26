@@ -68,6 +68,6 @@ let callback;
 callback = callback || (() => {});    // ok
 
 item => {...};//okay
-item,key => {...} //error
-(item,key)=> {...} //okay
+item,key => {...}; //error
+(item,key)=> {...}; //okay
 ```
