@@ -71,3 +71,33 @@ item => {...};//okay
 item,key => {...}; //error
 (item,key)=> {...}; //okay
 ```
+### class
+#### class expressions and class declarations
+```javascript
+// class declaration
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}
+
+//class expression is another way to define a class.
+// unnamed
+var Rectangle = class {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+};
+console.log(Rectangle.name); // output: "Rectangle"
+
+// named
+var Rectangle = class Rectangle2 {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+};
+console.log(Rectangle.name); // output: "Rectangle2"
+```
