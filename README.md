@@ -56,7 +56,7 @@ function Person(){
 var p = new Person();
 ```
 #### body
-In a concise body, only an expression is specified, which becomes the explicit return value.\ 
+In a concise body, only an expression is specified, which becomes the explicit return value.\
 In a block body, you must use an explicit return statement.
 ```javascript
 var func = x => x * x; // concise body syntax, implied "return"
