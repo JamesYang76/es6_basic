@@ -164,3 +164,35 @@ class Lion extends Cat {
 var l = new Lion('Fuzzy');
 l.speak(); 
 ```
+### Object
+#### initialize 
+The list variable name and the state property name share the same name.
+```javascript
+var name = 'Robin';
+var user = { name: name,};//es5
+
+const name = 'Robin';
+const user = { name,};//es6
+```
+```javascript
+// ES5
+var userService = {
+  getUserName: function (user) {
+    return user.firstname + ' ' + user.lastname;
+  },
+};
+
+// ES6
+const userService = {
+  getUserName(user) {
+    return user.firstname + ' ' + user.lastname;
+  },
+};
+```
+```javascript
+var user = { name: 'Robin',};// ES5
+
+// ES6
+const key = 'name';
+const user = { [key]: 'Robin',};
+```
