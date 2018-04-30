@@ -173,6 +173,13 @@ var user = { name: name,};//es5
 
 const name = 'Robin';
 const user = { name,};//es6
+
+
+var user = { name: 'Robin',};// ES5
+
+// ES6
+const key = 'name';
+const user = { [key]: 'Robin',};
 ```
 ```javascript
 // ES5
@@ -188,11 +195,4 @@ const userService = {
     return user.firstname + ' ' + user.lastname;
   },
 };
-```
-```javascript
-var user = { name: 'Robin',};// ES5
-
-// ES6
-const key = 'name';
-const user = { [key]: 'Robin',};
 ```
