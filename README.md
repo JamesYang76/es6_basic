@@ -138,3 +138,29 @@ const p2 = new Point(10, 10);
 console.log(Point.distance(p1, p2)); // 7.0710678118654755
 
 ```
+#### extend
+If there is a constructor present in subclass, it needs to first call super() before using "this".\
+The super keyword is used to call corresponding methods of super class.
+```javascript
+class Cat { 
+  constructor(name) {
+    this.name = name;
+  }
+  speak() {
+    console.log(this.name + ' makes a noise.');
+  }
+}
+
+class Lion extends Cat {
+  constructor(name) {
+     super(name); // because of constructor, super is mandotary,
+  }
+  speak() {
+    super.speak();
+    console.log(this.name + ' roars.');
+  }
+}
+
+var l = new Lion('Fuzzy');
+l.speak(); 
+```
