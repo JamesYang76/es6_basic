@@ -28,6 +28,24 @@ try {
 }
 console.log(number);// expected output: 42
 ```
+
+### Destructuring assignment
+expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables\
+#### Object destructuring
+```javascript
+const user = { firstname: 'Robin',lastname: 'Wieruch',};
+const { firstname, lastname } = user;
+```
+#### Array destructuring
+```javascript
+var [a=5, b=7] = [1];
+
+var [a, ...b] = [1, 2, 3];
+console.log(a); // 1
+console.log(b); // [2, 3]
+```
+
+
 ### Arrow function
 #### this
 An arrow function expression has a shorter syntax than a function expression and does not have its own `this, arguments, super, or new.target`.
