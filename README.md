@@ -44,7 +44,15 @@ var [a, ...b] = [1, 2, 3];
 console.log(a); // 1
 console.log(b); // [2, 3]
 ```
+### Template literals
+Template literals are enclosed by the back-tick (` `)  character instead of double or single quotes.\
+Template literals can contain placeholders. These are indicated by the dollar sign and curly braces (${expression})
+```javascript
+var a = 5;
+var b = 10;
+console.log(`Fifteen is ${a + b} and not ${2 * a + b}.`);
 
+```
 
 ### Arrow function
 #### this
