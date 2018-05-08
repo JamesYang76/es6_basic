@@ -222,3 +222,23 @@ const userService = {
   },
 };
 ```
+#### Object.assign()
+The Object.assign() method is used to copy the values of all enumerable own properties from one or more source objects to a target object.\
+It will return the target object.
+```javascript
+//Object.assign(target, ...sources)
+
+var obj = { a: 1 };
+var copy = Object.assign({}, obj);
+console.log(copy); // { a: 1 }
+
+var o1 = { a: 1 };
+var o2 = { b: 2, shallow:{d:0} };
+var o3 = { c: 3 };
+var obj = Object.assign(o1, o2, o3);
+
+o1.a = 10;// also obj.a is 10
+o2.b = 20;// obj.b and o1.b are 2
+o2.shallow.d = 999;// does not support deep clone,so obj.shallow.d and o1.shallow.d are 999;
+
+```
