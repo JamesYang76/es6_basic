@@ -71,7 +71,9 @@ console.log(user); // output: { firstname: 'Robin', lastname: 'Wieruch', age: 28
 var parts = ['shoulders', 'knees']; 
 var lyrics = ['head', ...parts, 'and', 'toes']; //["head", "shoulders", "knees", "and", "toes"]
 
-
+var arr1 = [0, 1, 2];
+var arr2 = [3, 4, 5];
+arr1 = [...arr1, ...arr2];//same as arr1 = arr1.concat(arr2);
 ```
 
 
