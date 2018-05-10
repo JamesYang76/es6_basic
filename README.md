@@ -53,6 +53,28 @@ var b = 10;
 console.log(`Fifteen is ${a + b} and not ${2 * a + b}.`);
 
 ```
+### Spread syntax
+#### object
+```javascript
+const userNames = { firstname: 'Robin', lastname: 'Wieruch' };
+const age = 28;
+const user = { ...userNames, age };
+console.log(user); // output: { firstname: 'Robin', lastname: 'Wieruch', age: 28 }
+
+‘const userNames = { firstname: 'Robin', lastname: 'Wieruch' };
+const userAge = { age: 28 };
+const user = { ...userNames, ...userAge };
+console.log(user); // output: { firstname: 'Robin', lastname: 'Wieruch', age: 28 }
+```
+#### array
+```javascript
+var parts = ['shoulders', 'knees']; 
+var lyrics = ['head', ...parts, 'and', 'toes']; //["head", "shoulders", "knees", "and", "toes"]
+
+
+```
+
+
 
 ### Arrow function
 #### this
