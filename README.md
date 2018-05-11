@@ -175,6 +175,18 @@ item => {...};//okay
 item,key => {...}; //error
 (item,key)=> {...}; //okay
 ```
+#### HOC
+```javascript
+function withFoo(Component) {
+  return function(props) {
+    return <Component { ...props } />;
+  }
+}
+
+//ES5
+const withFoo = (Component) => (props) =>
+  <Component { ...props } />
+```
 ### class
 #### class expressions and class declarations
 ```javascript
