@@ -75,8 +75,52 @@ var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 arr1 = [...arr1, ...arr2];//same as arr1 = arr1.concat(arr2);
 ```
+### import and export
+```javascript
+//file1.js
+const firstname = 'robin';
+const lastname = 'wieruch';
+export { firstname, lastname };
 
+//file2.js
+import { firstname, lastname } from './file1.js';
+console.log(firstname);//output: robin
 
+import * as person from './file1.js';
+console.log(person.firstname);// output: robin
+
+import { firstname as foo } from './file1.js';
+console.log(foo);// output: robin
+```
+```javascript
+//file1.js
+const robin = {
+  firstname: 'robin',
+  lastname: 'wieruch',
+};
+export default robin;
+
+//file2.js
+import developer from './file1.js';
+console.log(developer);// output: { firstname: 'robin', lastname: 'wieruch' }
+```
+```javascript
+//file1.js
+const firstname = 'robin';
+const lastname = 'wieruch';
+const person = { firstname, lastname,};
+export { firstname,lastname,};
+export default person;
+
+//file2.js
+import developer, { firstname, lastname } from './file1.js';
+console.log(developer); // output: { firstname: 'robin', lastname: 'wieruch' }
+console.log(firstname, lastname); // output: robin wieruch
+```
+```javascript
+export const firstname = 'robin';
+export const lastname = 'wieruch';
+```
 
 ### Arrow function
 #### this
