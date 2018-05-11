@@ -75,6 +75,16 @@ var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 arr1 = [...arr1, ...arr2];//same as arr1 = arr1.concat(arr2);
 ```
+
+### function
+```javascript
+function sum(x, y, z) {
+  return x + y + z;
+}
+const numbers = [1, 2, 3];
+console.log(sum(...numbers));// expected output: 6
+```
+
 ### import and export
 ```javascript
 //file1.js
