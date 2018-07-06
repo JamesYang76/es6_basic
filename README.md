@@ -30,11 +30,15 @@ console.log(number);// expected output: 42
 ```
 
 ### Destructuring assignment
-expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables\
+expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables
 #### Object destructuring
 ```javascript
 const user = { firstname: 'Robin',lastname: 'Wieruch',};
 const { firstname, lastname } = user;
+
+const { firstname, ...rest } = user;
+
+console.log(rest); //{lastname: "Wieruch"}
 ```
 #### Array destructuring
 ```javascript
