@@ -336,3 +336,22 @@ o2.b = 20;// obj.b and o1.b are 2
 o2.shallow.d = 999;// does not support deep clone,so obj.shallow.d and o1.shallow.d are 999;
 
 ```
+# yvm
+
+#### install
+```bash
+$ brew unlink yarn
+$ brew install tophat/bar/yvm
+
+$ vim ~/.bashrc
+# add below in .bashrc 
+export YVM_DIR="/usr/local/opt/yvm" 
+[ -r $YVM_DIR/yvm.sh ] && source $YVM_DIR/yvm.sh
+
+$ source ~/.bashrc   #reload bash
+
+$ yvm install 1.17.3
+$ yvm list
+$ yvm use 1.17.3
+$ yarn --version
+```
